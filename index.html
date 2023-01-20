@@ -25,6 +25,26 @@
       .odd {
         background: #fefcf9;
       }
+      /* 分数表示 */
+      /* 全体の構成 */
+      .frac{display: inline-block;
+      vertical-align: -0.6em;
+      text-align: center;
+      font-size: 1em;
+      line-height: 1.2em;}
+
+      /* 分子と分母の共通様式 */
+      .si,.bo{display: block;
+      padding: 0 0.3em;
+      margin: 0px 0.2em 0px 0.05em;
+      }
+
+      /* 分子 */
+      .si{line-height:1.0em;}
+
+      /* 分母 */
+      .bo{line-height:1.2em;
+      border-top: solid 0.075em;}/* 色を指定しないと親の色と同じになる */
     </style>
   </head>
   <body>
@@ -50,19 +70,19 @@
         </tr>
         <tr>
           <td>倍率</td>
-          <td>2/8</td>
-          <td>2/7</td>
-          <td>2/6</td>
-          <td>2/5</td>
-          <td>2/4</td>
-          <td>2/3</td>
-          <td>2/2</td>
-          <td>3/2</td>
-          <td>4/2</td>
-          <td>5/2</td>
-          <td>6/2</td>
-          <td>7/2</td>
-          <td>8/2</td>
+          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>8</span></span></td>
+          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>7</span></span></td>
+          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>8</span></span></td>
+          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>5</span></span></td>
+          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>4</span></span></td>
+          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>3</span></span></td>
+          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>2</span></span></td>
+          <td><span class=”frac”><span class=”si”>3</span><span class=”bo”>2</span></span></td>
+          <td><span class=”frac”><span class=”si”>4</span><span class=”bo”>2</span></span></td>
+          <td><span class=”frac”><span class=”si”>5</span><span class=”bo”>2</span></span></td>
+          <td><span class=”frac”><span class=”si”>6</span><span class=”bo”>2</span></span></td>
+          <td><span class=”frac”><span class=”si”>7</span><span class=”bo”>2</span></span></td>
+          <td><span class=”frac”><span class=”si”>8</span><span class=”bo”>2</span></span></td>
         </tr>
       </tbody>
     </table>
