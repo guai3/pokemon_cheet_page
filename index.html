@@ -1,200 +1,467 @@
 <!DOCTYPE html>
 <html>
-    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>ポケモン対戦チートシート</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      body{
-	     font-family: sans-serif ;
-      }
-      @media (prefers-color-scheme: dark) {
-        body {
-        background-color: #000;
-        color: #fff;
-        }
-      }
-      .resizeimage img { width: 100%; }
-      table th {
-        white-space: nowrap;
-        }
-      table , td, th {
-        border: 1px solid #595959;
-        border-collapse: collapse;
-        width:100%;
-        table-layout: fixed;
-        word-break: break-word;
-      }
-      td, th {
-        padding: 3px;
-        height: 25px;
-      }
-      th {
-        background: #C0C0C0;
-      }
-      .even {
-        background: #fbf8f0;
-      }
-      .odd {
-        background: #fefcf9;
-      }
-      /* 分数表示 */
-    .fraction{
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-    }
-    .fraction_n,.fraction_d{
-        display: block;
-    }
-    .fraction_n{
-        border-bottom: 1px solid #333;
-    }
-    </style>
-  </head>
-  <body>
-    <h2> ポケモン対戦チートシート</h2>
-    <h3> 攻撃・防御・特攻・特防・素早さ</h3>
-    <table>
-      <tbody>
-        <tr>
-          <th>ランク</th>
-          <th>-6</th>
-          <th>-5</th>
-          <th>-4</th>
-          <th>-3</th>
-          <th>-2</th>
-          <th>-1</th>
-          <th>0</th>
-        </tr>
-        <tr>
-          <td>倍率</td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">2</span>
-                <span class="fraction_d">8</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">2</span>
-                <span class="fraction_d">7</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">2</span>
-                <span class="fraction_d">6</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">2</span>
-                <span class="fraction_d">5</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">2</span>
-                <span class="fraction_d">4</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">2</span>
-                <span class="fraction_d">3</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">2</span>
-                <span class="fraction_d">2</span>
-            </span>
-          </td>        
-        </tr>
-        <tr>
-          <td>割合</td>
-          <td>25%</td>
-          <td>29%</td>
-          <td>33%</td>
-          <td>40%</td>
-          <td>50%</td>
-          <td>67%</td>
-          <td>100%</td>
-      </tbody>
-    </table>
-    <br>
-    <table>
-      <tbody>
-        <tr>
-          <th>ランク</th>
-          <th>0</th>
-          <th>1</th>
-          <th>2</th>
-          <th>3</th>
-          <th>4</th>
-          <th>5</th>
-          <th>6</th>
-        </tr>
-        <tr>
-          <td>倍率</td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">2</span>
-                <span class="fraction_d">2</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">3</span>
-                <span class="fraction_d">2</span>
-            </span>
-          </td>
-           <td>
-            <span class="fraction">
-                <span class="fraction_n">4</span>
-                <span class="fraction_d">2</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">5</span>
-                <span class="fraction_d">2</span>
-            </span>
-          </td>
-          
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">6</span>
-                <span class="fraction_d">2</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">7</span>
-                <span class="fraction_d">2</span>
-            </span>
-          </td>
-          <td>
-            <span class="fraction">
-                <span class="fraction_n">8</span>
-                <span class="fraction_d">2</span>
-            </span>
-          </td>         
-        </tr>
-        <tr>
-          <td>割合</td>
-          <td>100%</td>
-          <td>150%</td>
-          <td>200%</td>
-          <td>250%</td>
-          <td>300%</td>
-          <td>350%</td>
-          <td>400%</td>
-      </tbody>
-    </table>
-    <br>
-    <h3> タイプ相性表</h3>
-    <p class="resizeimage">
-        <img class="resizeimage"src="type.png">
-    </p>
-</body></html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ポケモン対戦チートシート</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<h2> ポケモン対戦チートシート</h2>
+	<div class="tabs">
+		<input id="all" type="radio" name="tab_item" checked>
+		<label class="tab_item" for="all">タイプ相性表</label>
+		<input id="programming" type="radio" name="tab_item">
+		<label class="tab_item" for="programming">ランク補正</label>
+		<input id="design" type="radio" name="tab_item">
+		<label class="tab_item" for="design">耐久調整</label>
+		<div class="tab_content" id="all_content">
+			<div class="tab_content_description">
+				<p class="c-txtsp">
+
+					<h3> タイプ相性表</h3>
+					<p class="resizeimage">
+						<img class="resizeimage" src="type.png">
+					</p>
+				</p>
+			</div>
+		</div>
+
+		<div class="tab_content" id="programming_content">
+			<div class="tab_content_description">
+				<p class="c-txtsp">
+					<h3> 攻撃・防御・特攻・特防・素早さ</h3>
+					<table>
+						<tbody>
+							<tr>
+								<th>ランク</th>
+								<th>-6</th>
+								<th>-5</th>
+								<th>-4</th>
+								<th>-3</th>
+								<th>-2</th>
+								<th>-1</th>
+								<th>0</th>
+							</tr>
+							<tr>
+								<td>倍率</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">2</span>
+										<span class="fraction_d">8</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">2</span>
+										<span class="fraction_d">7</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">2</span>
+										<span class="fraction_d">6</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">2</span>
+										<span class="fraction_d">5</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">2</span>
+										<span class="fraction_d">4</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">2</span>
+										<span class="fraction_d">3</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">2</span>
+										<span class="fraction_d">2</span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>割合</td>
+								<td>25%</td>
+								<td>29%</td>
+								<td>33%</td>
+								<td>40%</td>
+								<td>50%</td>
+								<td>67%</td>
+								<td>100%</td>
+						</tbody>
+					</table>
+					<br>
+					<table>
+						<tbody>
+							<tr>
+								<th>ランク</th>
+								<th>0</th>
+								<th>1</th>
+								<th>2</th>
+								<th>3</th>
+								<th>4</th>
+								<th>5</th>
+								<th>6</th>
+							</tr>
+							<tr>
+								<td>倍率</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">2</span>
+										<span class="fraction_d">2</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">3</span>
+										<span class="fraction_d">2</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">4</span>
+										<span class="fraction_d">2</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">5</span>
+										<span class="fraction_d">2</span>
+									</span>
+								</td>
+
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">6</span>
+										<span class="fraction_d">2</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">7</span>
+										<span class="fraction_d">2</span>
+									</span>
+								</td>
+								<td>
+									<span class="fraction">
+										<span class="fraction_n">8</span>
+										<span class="fraction_d">2</span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>割合</td>
+								<td>100%</td>
+								<td>150%</td>
+								<td>200%</td>
+								<td>250%</td>
+								<td>300%</td>
+								<td>350%</td>
+								<td>400%</td>
+						</tbody>
+					</table>
+
+
+
+				</p>
+			</div>
+		</div>
+
+
+		<div class="tab_content" id="design_content">
+			<div class="tab_content_description">
+				<p class="c-txtsp">
+
+					<table id="Check" class="data">
+						<h3>HP調整</h3>
+						<tr>
+							<th>HP数値</th>
+							<th>利用箇所(例)</th>
+						</tr>
+						<tr>
+							<td>2n</td>
+							<td class="left">
+								<ul>
+									<li>はらだいこ1回でオボン発動</li>
+									<li>くいしんぼうで木の実発動</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>2n+1</td>
+							<td class="left">
+								<ul>
+									<li>とびひざげり等の失敗反動2回耐え</li>
+									<li>4倍のステルスロック2回耐え</li>
+									<li>じこさいせい等の回復量増加</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>3n</td>
+							<td class="left">
+								<ul>
+									<li>さいせいりょくの回復量最大</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>4n</td>
+							<td class="left">
+								<ul>
+									<li>みがわり3回で木の実発動</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>4n+1</td>
+							<td class="left">
+								<ul>
+									<li>みがわり4回で残りHP1</li>
+									<li>きしかいせい等</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>4n+1~+3</td>
+							<td class="left">
+								<ul>
+									<li>みがわり4回使用可能</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>6n-1</td>
+							<td class="left">
+								<ul>
+									<li>ゴツゴツメット、まきびし2回等1/6ダメージ最小</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>8n</td>
+							<td class="left">
+								<ul>
+									<li>ポイズンヒールの回復量最大</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>8n+1~+3</td>
+							<td class="left">
+								<ul>
+									<li>ポイズンヒールの回復2回でみがわり1回分のHP回復</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>8n-1</td>
+							<td class="left">
+								<ul>
+									<li>1/8ダメージ最小</li>
+									<li>どく、やどりぎのタネ、ステルスロック等持続ダメージ</li>
+									<li>しめつける状態ダメージ</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>10n-1</td>
+							<td class="left">
+								<ul>
+									<li>いのちのたまのダメージ最小</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>16n</td>
+							<td class="left">
+								<ul>
+									<li>たべのこし、アイスボディ等の回復量最大</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>16n+1</td>
+							<td class="left">
+								<ul>
+									<li>奇数を維持してたべのこし、アイスボディ等の回復量最大</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>16n+1~+3</td>
+							<td class="left">
+								<ul>
+									<li>たべのこし、アイスボディ等の回復4回でみがわり1回分のHP回復</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>16n-1</td>
+							<td class="left">
+								<ul>
+									<li>すなあらし、やけど、もうどく等のダメージ最小</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>50n+1</td>
+							<td class="left">
+								<ul>
+									<li>ちきゅうなげ等の固定ダメージをより多く耐える(最低ライン)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>191以下</td>
+							<td class="left">
+								<ul>
+									<li>Lv.1ココドラのがむしゃら+すなあらしダメージ耐え</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>205以上</td>
+							<td class="left">
+								<ul>
+									<li>ちきゅうなげ等の固定ダメージをみがわりが耐える</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+
+
+					<table id="Rate" class="data">
+						<h3>ダメージ、回復量</h3>
+						<tr>
+							<th>割合</th>
+							<th>具体例</th>
+						</tr>
+						<tr>
+
+							<td>2/3</td>
+							<td class="left">
+								<ul>
+									<li>「ひざしがつよい」状態での回復量</li>
+									<li>→あさのひざし、こうごうせい、つきのひかり</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>1/2(切捨)</td>
+							<td class="left">
+								<ul>
+									<li>ステルスロック(4倍)ダメージ</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>1/2(切上)</td>
+							<td class="left">
+								<ul>
+									<li>じこさいせい等回復量</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>1/3</td>
+							<td class="left">
+								<ul>
+									<li>さいせいりょく回復量</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>1/4</td>
+							<td class="left">
+								<ul>
+									<li>みがわりのHP消費量(みがわり人形のHP)</li>
+									<li>ステルスロック(2倍)ダメージ</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>1/6</td>
+							<td class="left">
+								<ul>
+									<li>ゴツゴツメット、まきびし(2回)ダメージ</li>
+									<li>しめつける状態ダメージ(しめつけバンド所持)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>1/8</td>
+							<td class="left">
+								<ul>
+									<li>どく、やどりぎのタネダメージ</li>
+									<li>ポイズンヒール回復量</li>
+									<li>さめはだダメージ</li>
+									<li>ステルスロック(等倍)ダメージ</li>
+									<li>しめつける状態ダメージ</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>1/10</td>
+							<td class="left">
+								<ul>
+									<li>いのちのたまダメージ</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+
+							<td>1/16</td>
+							<td class="left">
+								<ul>
+									<li>たべのこし、アイスボディ等回復量</li>
+									<li>やけどダメージ</li>
+									<li>天候ダメージ</li>
+									<li>ステルスロックダメージ(1/2)</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
