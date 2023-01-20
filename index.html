@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>ポケモンチートシート</title>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ポケモン対戦チートシート</title>
     <style>
       .resizeimage img { width: 100%; }
+      table th {
+        white-space: nowrap;
+        }
       table , td, th {
         border: 1px solid #595959;
         border-collapse: collapse;
+        width:100%;
+        table-layout: fixed;
+        word-break: break-word;
       }
       td, th {
         padding: 3px;
@@ -16,7 +19,7 @@
         height: 25px;
       }
       th {
-        background: #f0e6cc;
+        background: #C0C0C0;
       }
       .even {
         background: #fbf8f0;
@@ -25,31 +28,22 @@
         background: #fefcf9;
       }
       /* 分数表示 */
-      /* 全体の構成 */
-      .frac{display: inline-block;
-      vertical-align: -0.6em;
-      text-align: center;
-      font-size: 1em;
-      line-height: 1.2em;}
-
-      /* 分子と分母の共通様式 */
-      .si,.bo{display: block;
-      padding: 0 0.3em;
-      margin: 0px 0.2em 0px 0.05em;
-      }
-
-      /* 分子 */
-      .si{line-height:1.0em;}
-
-      /* 分母 */
-      .bo{line-height:1.2em;
-      border-top: solid 0.075em;}/* 色を指定しないと親の色と同じになる */
+    .fraction{
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .fraction_n,.fraction_d{
+        display: block;
+    }
+    .fraction_n{
+        border-bottom: 1px solid #333;
+    }
     </style>
   </head>
   <body>
-    <span class=”frac”><span class=”si”>5</span><span class=”bo”>12</span></span>
-    <p>
-     <h3> 攻撃・防御・特攻・特防</h2>
+    <h1> ポケモン対戦チートシート</h1>
+    <h3> 攻撃・防御・特攻・特防・素早さ</h3>
     <table>
       <tbody>
         <tr>
@@ -70,21 +64,106 @@
         </tr>
         <tr>
           <td>倍率</td>
-          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>8</span></span></td>
-          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>7</span></span></td>
-          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>6</span></span></td>
-          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>5</span></span></td>
-          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>4</span></span></td>
-          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>3</span></span></td>
-          <td><span class=”frac”><span class=”si”>2</span><span class=”bo”>2</span></span></td>
-          <td><span class=”frac”><span class=”si”>3</span><span class=”bo”>2</span></span></td>
-          <td><span class=”frac”><span class=”si”>4</span><span class=”bo”>2</span></span></td>
-          <td><span class=”frac”><span class=”si”>5</span><span class=”bo”>2</span></span></td>
-          <td><span class=”frac”><span class=”si”>6</span><span class=”bo”>2</span></span></td>
-          <td><span class=”frac”><span class=”si”>7</span><span class=”bo”>2</span></span></td>
-          <td><span class=”frac”><span class=”si”>8</span><span class=”bo”>2</span></span></td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">2</span>
+                <span class="fraction_d">8</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">2</span>
+                <span class="fraction_d">7</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">2</span>
+                <span class="fraction_d">6</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">2</span>
+                <span class="fraction_d">5</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">2</span>
+                <span class="fraction_d">4</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">2</span>
+                <span class="fraction_d">3</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">2</span>
+                <span class="fraction_d">2</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">3</span>
+                <span class="fraction_d">2</span>
+            </span>
+          </td>
+           <td>
+            <span class="fraction">
+                <span class="fraction_n">4</span>
+                <span class="fraction_d">2</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">5</span>
+                <span class="fraction_d">2</span>
+            </span>
+          </td>
+          
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">6</span>
+                <span class="fraction_d">2</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">7</span>
+                <span class="fraction_d">2</span>
+            </span>
+          </td>
+          <td>
+            <span class="fraction">
+                <span class="fraction_n">8</span>
+                <span class="fraction_d">2</span>
+            </span>
+          </td>         
         </tr>
+        <tr>
+          <td>割合</td>
+          <td>25%</td>
+          <td>29%</td>
+          <td>33%</td>
+          <td>40%</td>
+          <td>50%</td>
+          <td>67%</td>
+          <td>100%</td>
+          <td>150%</td>
+          <td>200%</td>
+          <td>250%</td>
+          <td>300%</td>
+          <td>350%</td>
+          <td>400%</td>
       </tbody>
     </table>
-  </body>
-</html>
+    <br>
+    <h3> タイプ相性表</h3>
+    <p class="resizeimage">
+        <img class="resizeimage"src="type.png">
+    </p>
+</body></html>
